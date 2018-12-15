@@ -1,0 +1,10 @@
+.list-group {
+    max-height: 350px;
+    overflow: auto;
+    a {
+        cursor: pointer;
+    }
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-size: 15px;
+  }

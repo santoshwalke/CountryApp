@@ -1,0 +1,66 @@
+<div *ngIf="descripation else notDescripatio" id="countryDecsripation">
+    <div class="card">
+        <div class="card-header">
+                <img [src]="descripation.flag" alt=""> {{descripation.name}}
+        </div>
+        <div class="card-body">
+            <table class='table table-borderless'>
+                <tbody>
+                    <tr>
+                        <th>
+                            Captial
+                        </th>
+                        <th>
+                            {{descripation.capital}}
+                        </th>
+                    </tr>                    
+                     <tr>
+                        <th>
+                            Languages
+                        </th>
+                        <th>
+                            {{descripation.languages[0].name}}
+                        </th>
+                    </tr>
+                     <tr>
+                        <th>
+                            Region
+                        </th>
+                        <th>
+                            {{descripation.region}}
+                        </th>
+                    </tr>
+                     <tr>
+                        <th>
+                            Population
+                        </th>
+                        <th>
+                            {{descripation.population}}
+                        </th>
+                    </tr>
+                     <tr>
+                        <th>
+                            Area
+                        </th>
+                        <th>
+                            {{descripation.area}}
+                        </th>
+                    </tr>
+                     <tr>
+                        <th>
+                            Border
+                        </th>
+                        <th>
+                            {{descripation.borders}}
+                        </th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<ng-template #notDescripatio>
+    <div class="alert alert-primary" role="alert">
+        Country Not Selected
+    </div>
+</ng-template>

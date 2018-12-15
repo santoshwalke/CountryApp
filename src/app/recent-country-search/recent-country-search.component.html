@@ -1,0 +1,15 @@
+<div *ngIf="countryObj">
+    <div class="col-md-12 text-center">
+        <ul class="list-group">
+            <li class='list-group-item list-group-item-action disabled'>
+                Recently Selected Country List
+            </li>
+            <li 
+            class="list-group-item list-group-item-action"
+            *ngFor="let country of countryObj"
+            (click)='countrySelected(country)'>
+                {{country.name}}
+            </li>
+        </ul>
+    </div>
+</div>
